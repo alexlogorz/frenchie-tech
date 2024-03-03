@@ -5,14 +5,14 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
-  private eventSubject = new Subject<boolean>();
+  private toolbarEventSubject = new Subject<boolean>();
 
   // For listening to events emitted by the subject
-  toolbarEventListener$ = this.eventSubject.asObservable();
+  toolbarEventListener$ = this.toolbarEventSubject.asObservable();
 
   // For emmitting events from the subjec.
   emitToolbarClickEvent(toggled: boolean) {
-    this.eventSubject.next(!toggled);
+    this.toolbarEventSubject.next(!toggled);
   }
 
   constructor() { }
