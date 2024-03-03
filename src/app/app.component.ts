@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
 
 @Component({
   selector: 'app-root',

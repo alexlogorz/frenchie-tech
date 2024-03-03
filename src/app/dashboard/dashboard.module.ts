@@ -4,21 +4,22 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard.component';
 
+// Material theme modules
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
   declarations: [
     UserprofileComponent,
     SidenavComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatSidenavModule
   ],
   exports: [
-    UserprofileComponent,
-    SidenavComponent,
-    DashboardComponent
+    MatSidenavModule
   ]
 })
 export class DashboardModule { }
